@@ -11,22 +11,33 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :code, style: "display: block" %>
-    <%= form.text_field :code %>
-  </div>
+<div class="container-fluid">
+  <section id="Producto" class="bg-dark text-white d-none d-sm-block">
+    <div>
+      <h3 class="text-center pt-5 pb-3">Productos</h3>
+      <hr class="opacity-100" />
+    </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
-  </div>
+    <form>
+      <div class="form-group">
+        <%= form.label :code, style: "display: block" %>
+        <%= form.text_field :code, html_options = { class: "form-control" } %>
+        </div>
+      <div class="form-group">
+        <%= form.label :description, style: "display: block" %>
+        <%= form.text_field :description, html_options = { class: "form-control" }%>
+      </div>
+      <div class="form-group">
+        <%= form.label :salesUnit, style: "display: block" %>
+        <%= form.text_field :salesUnit, html_options = { class: "form-control" } %>
+      </div>
+      <%= form.submit %>
 
-  <div>
-    <%= form.label :salesUnit, style: "display: block" %>
-    <%= form.text_field :salesUnit %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
+    <%# <button type="submit" class="btn btn-primary">Submit</button> %>
+  </form>
+  </section>
 <% end %>
+</div>
+
+
+
